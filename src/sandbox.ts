@@ -48,7 +48,7 @@ let mixed3: {
   login: any
 }
 
-// ============================ FUNCTION
+//# ============================ FUNCTION
 
 let greet: Function
 
@@ -62,11 +62,59 @@ const add = (a: number, b: number | string = 10, c?: number) => {
   console.log(c)
 }
 
-add(5)
+// add(5)
 
 const minus = (a: number, b: number): number => {
   return a - b
 }
 
 let result = minus(10, 4)
-console.log(result)
+// console.log(result)
+
+//# =================================================
+
+type StringOrNum = string | number
+type objWithName = {
+  name: string
+  uid: StringOrNum
+}
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has a uid of ${uid}`)
+}
+
+// logDetails("asdf78623", "new item")
+
+const greetA = (user: objWithName) => {
+  console.log(`${user.name} says hello`)
+}
+
+const greetB = (user: { name: string; uid: string | number }) => {
+  console.log(`${user.name} says hello`)
+}
+
+//# =================================================
+
+let calc: (a: number, b: number, c: string) => number
+
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === "add") {
+    return numOne + numTwo
+  } else {
+    return numOne - numTwo
+  }
+}
+
+let logD: (obj: { name: string; age: number }) => void
+
+type person = {
+  name: string
+  age: number
+}
+logD = (ninja: person) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`)
+}
+
+logD({ name: "bagus", age: 30 })
+
+//# =================================================

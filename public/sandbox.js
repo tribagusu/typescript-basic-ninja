@@ -29,7 +29,7 @@ ninjaTwo = {
 // any
 let mixed2;
 let mixed3;
-// ============================ FUNCTION
+//# ============================ FUNCTION
 let greet;
 greet = () => {
     console.log("hello");
@@ -39,9 +39,34 @@ const add = (a, b = 10, c) => {
     console.log(b);
     console.log(c);
 };
-add(5);
+// add(5)
 const minus = (a, b) => {
     return a - b;
 };
 let result = minus(10, 4);
-console.log(result);
+const logDetails = (uid, item) => {
+    console.log(`${item} has a uid of ${uid}`);
+};
+// logDetails("asdf78623", "new item")
+const greetA = (user) => {
+    console.log(`${user.name} says hello`);
+};
+const greetB = (user) => {
+    console.log(`${user.name} says hello`);
+};
+//# =================================================
+let calc;
+calc = (numOne, numTwo, action) => {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+let logD;
+logD = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
+};
+logD({ name: "bagus", age: 30 });
+//# =================================================
