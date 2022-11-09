@@ -38,3 +38,35 @@ ninjaTwo = {
   belt: "string",
   login: true,
 }
+
+// any
+
+let mixed2: any[]
+let mixed3: {
+  name: any
+  age: any
+  login: any
+}
+
+// ============================ FUNCTION
+
+let greet: Function
+
+greet = () => {
+  console.log("hello")
+}
+
+const add = (a: number, b: number | string = 10, c?: number) => {
+  console.log(a)
+  console.log(b)
+  console.log(c)
+}
+
+add(5)
+
+const minus = (a: number, b: number): number => {
+  return a - b
+}
+
+let result = minus(10, 4)
+console.log(result)
